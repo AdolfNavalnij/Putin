@@ -1,58 +1,43 @@
-import discord
-from discord.ext import commands
-from time import sleep
-from sort2 import sort
 from random import randint
-from randstr import randstr
-import subprocess 
-
-def ping():
-    command = ['ping', "-n", '11', "discordapp.com"]
-
-    return subprocess.call(command)
-
-client = discord.Client()
-TOKEN = 'NjY1MjU1NDM0OTAyNTY4OTg1.Xhi-Fg.UwN8GbUd1miO-ze9s4QgT70bafA'
-bot = commands.Bot(command_prefix='put!') #Bot intialization
-@bot.command(pass_context=True)
-async def Шо(ctx):
-	await ctx.send("@Навальный")
-	await ctx.message.delete()
-@bot.command(pass_context=True)
-async def propoganda(ctx): #asinc bot function
-	while True:
-		x = randstr(5)
-		if x == "putin":
-			await ctx.send(x)
-			break
-	print("""Log:
-		command propganda было получено""")
-@bot.command(pass_context=True)
-async def propoganda_company(ctx,arg):
-	for i in range(int(arg)):
-		await ctx.send("Навальный лох") #not infinity loop of propoganda)))
-		print("""Log:
-			command propganda_company работает""")
-
-	print("""Log:
-		command propganda_company завершено""")
-@bot.command(pass_context=True) #4
-async def banan(ctx):
-	print("""LOG
-		banan было получено""")
-	while True:
-		await ctx.send("@everyone ЗА ПУТИНА")
-	raise NameError("Путин сдох")
-@bot.command(pass_context=True)
-async def yoptascript(ctx,arg):
-	if "ксива.малява" in  arg:
-		await ctx.send("Этот код работает нах")
+def xor(x,y):
+	if x == y:
+		return x,y
 	else:
-		while True:
-			await ctx.send("")
-@client.event
-async def on_message(message):
-	client.delete_messages(message)
-	while False:
-		await client.delete_messages(randint(000000000000000000,999999999999999999))
-bot.run(TOKEN)
+		return y,x
+def randstr(x):
+	s = ""
+	S = ["q","w","e","r","t","y","u","i","o","p","a","s","d","f","g","h","j","k","l","z","x","c","v","b","n","m","_"]
+	for i in range(x):
+		s = s + S[randint(0,len(S)-1)]
+	return s
+
+T2 = []
+if input() == "1":
+	file = open("codes.txt", "w")
+	for i in range(2566611):
+		file.write(randstr(40) + "\n")
+	file.close
+file = open("codes.txt", "r")
+for char in file:
+	T2.append(char)
+file.close
+if input() == "1":
+	file = open("codes2.txt", "w")
+	for i in range(2566611):
+		file.write(str(randint(0,256661)) + "\n")
+	file.close
+T = []
+file = open("codes2.txt", "r")
+for char in file:
+	T.append(int(char))
+file.close
+
+def hash(T,T2,W):
+	h = len(W) 
+	for c in W:
+		index = h + ord(c)
+		h = T[index]
+		g = T2[index]
+	return g
+while True:
+ 	print(hash(T,T2,input()))
