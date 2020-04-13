@@ -39,5 +39,5 @@ def hash(T,T2,W):
 		h = T[index]
 		g = T2[index]
 	return g
-while True:
- 	print(hash(T,T2,input()))
+print("Prepare - Completed")
+print(hash(T,T2,'Gewhere'))
