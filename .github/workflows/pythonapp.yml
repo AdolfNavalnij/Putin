@@ -25,7 +25,7 @@ jobs:
         python -m pip install --upgrade pip
         pip install numpy
         pip install numba
-        pip install PIL
+        pip install pillow
         
     - name: Lint with flake8
       run: |
