@@ -14,7 +14,7 @@ def randstr(x):
 T2 = []
 if True:
 	file = open("codes.txt", "w")
-	for i in range(2566611):
+	for i in range(256661):
 		file.write(randstr(40) + "\n")
 	file.close
 file = open("codes.txt", "r")
@@ -23,8 +23,8 @@ for char in file:
 file.close
 if True:
 	file = open("codes2.txt", "w")
-	for i in range(2566611):
-		file.write(str(randint(0,256661)) + "\n")
+	for i in range(256661):
+		file.write(str(randint(0,25666)) + "\n")
 	file.close
 T = []
 file = open("codes2.txt", "r")
