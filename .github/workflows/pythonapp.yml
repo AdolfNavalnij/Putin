@@ -26,4 +26,7 @@ jobs:
         pip install numpy
         pip install numba
         pip install pillow
+    - name: Run App
+      run: |
+        python putin.py
         
