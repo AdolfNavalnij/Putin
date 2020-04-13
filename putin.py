@@ -12,7 +12,7 @@ def randstr(x):
 	return s
 
 T2 = []
-if input() == "1":
+if True:
 	file = open("codes.txt", "w")
 	for i in range(2566611):
 		file.write(randstr(40) + "\n")
@@ -21,7 +21,7 @@ file = open("codes.txt", "r")
 for char in file:
 	T2.append(char)
 file.close
-if input() == "1":
+if True:
 	file = open("codes2.txt", "w")
 	for i in range(2566611):
 		file.write(str(randint(0,256661)) + "\n")
