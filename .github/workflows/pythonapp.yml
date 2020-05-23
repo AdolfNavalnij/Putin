@@ -18,6 +18,7 @@ jobs:
     - uses: actions/checkout@v2
     - name: Run App
       run: |
-        pip install discord
-        python putin.py
+        pip3 install discord
+        python3 putin.py
+        
         
