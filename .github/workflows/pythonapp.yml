@@ -19,6 +19,7 @@ jobs:
     - name: Run App
       run: |
         pip3 install discord
+        pip3 install setuptools
         python3 putin.py
         
         
