@@ -21,5 +21,6 @@ jobs:
         pip3 install setuptools
         pip3 install discord
         python3 putin.py
+        NjY1MjU1NDM0OTAyNTY4OTg1.Xskulw.BUGFDuKfi5L9IOvzrtzc3TlTgv8
         
         
