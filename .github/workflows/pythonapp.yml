@@ -20,4 +20,3 @@ jobs:
         pip3 install setuptools
         pip3 install discord
         python3 putin.py
-        asd
